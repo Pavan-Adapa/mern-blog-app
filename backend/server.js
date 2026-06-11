@@ -16,7 +16,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://mern-blog-app-beta-one.vercel.app/", // your frontend
+    origin: "https://mern-blog-app-beta-one.vercel.app",
     credentials: true,
   }),
 );
