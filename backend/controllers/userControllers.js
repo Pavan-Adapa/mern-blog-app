@@ -34,8 +34,8 @@ const loginUser = async (req, res) => {
     });
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, // localhost = false
-      sameSite: "lax", // IMPORTANT
+      secure: true, // MUST be true in production (HTTPS)
+      sameSite: "none", // REQUIRED for cross-site cookies
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
     res
